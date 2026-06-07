@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="420" height="120" role="img" aria-label="IndyHost Laundry — Indianapolis">
+  <title>IndyHost Laundry — primary horizontal lockup</title>
+  <desc>Folded-linen mark with the IndyHost serif wordmark and a tracked-out INDIANAPOLIS · LAUNDRY tag.</desc>
+
+  <!-- ===== Mark (folded linen stack) ===== -->
+  <g transform="translate(10,18) scale(0.7)">
+    <ellipse cx="60" cy="98" rx="34" ry="4.5" fill="#1F2A2E" opacity="0.06"/>
+    <path d="M30 70 L60 84 L90 70 L90 78 L60 92 L30 78 Z" fill="#D9CFC2"/>
+    <path d="M30 60 L60 74 L90 60 L90 68 L60 82 L30 68 Z" fill="#E7DFD3"/>
+    <path d="M60 28 L92 46 L60 64 L28 46 Z" fill="#FBF8F3"/>
+    <path d="M60 64 L92 46 L92 54 L60 72 Z" fill="#EFE8DC"/>
+    <path d="M28 46 L60 64 L60 72 L28 54 Z" fill="#F4EEE4"/>
+    <path d="M60 28 L60 64" stroke="#3A5A4C" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+    <path d="M44 37 L76 37" stroke="#3A5A4C" stroke-width="1" stroke-linecap="round" opacity="0.22"/>
+    <path d="M28 46 L60 28 L92 46" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- ===== Wordmark ===== -->
+  <text x="104" y="64"
+        font-family="'Canela','Tiempos Headline','Playfair Display',Georgia,'Times New Roman',serif"
+        font-size="46" font-weight="500" letter-spacing="0.2" fill="#1F2A2E">IndyHost</text>
+
+  <!-- ===== Tag: tracked-out, all caps ===== -->
+  <text x="106" y="90"
+        font-family="'Helvetica Neue',Arial,'Segoe UI',system-ui,sans-serif"
+        font-size="12" font-weight="600" letter-spacing="4.5" fill="#3A5A4C">INDIANAPOLIS<tspan fill="#D9CFC2"> · </tspan><tspan fill="#8A8073">LAUNDRY</tspan></text>
+</svg>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IndyHost Laundry — Same-day linen service for Indianapolis hosts</title>
+<meta name="description" content="Premium, same-day linen service for Indianapolis short-term-rental hosts and boutique studios. Pickup at 11, delivery by 4, hospital corners every time.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M30 70 L60 84 L90 70 L90 78 L60 92 L30 78 Z' fill='%23D9CFC2'/%3E%3Cpath d='M60 28 L92 46 L60 64 L28 46 Z' fill='%23FBF8F3' stroke='%231F2A2E' stroke-width='2'/%3E%3Cpath d='M60 28 L60 64' stroke='%233A5A4C' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF8F3; --cream2:#F4EEE4; --sand:#E7DECF; --sand2:#D9CFC2;
+  --ink:#1F2A2E; --ink-soft:#4a565b; --sage:#3A5A4C; --sage-dk:#2f4a3e; --taupe:#8A8073;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter','Helvetica Neue',Arial,system-ui,sans-serif;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:var(--cream); color:var(--ink); font-family:var(--sans);
+  font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:var(--serif); font-weight:500; line-height:1.08; letter-spacing:-0.01em; margin:0;}
+p{margin:0 0 1em;}
+a{color:inherit; text-decoration:none;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+.eyebrow{font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage);}
+.muted{color:var(--ink-soft);}
+
+/* buttons */
+.btn{display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-weight:600; font-size:15px;
+  padding:13px 22px; border-radius:999px; border:1.5px solid var(--ink); cursor:pointer; transition:.2s ease; white-space:nowrap;}
+.btn-primary{background:var(--ink); color:var(--cream); border-color:var(--ink);}
+.btn-primary:hover{background:var(--sage); border-color:var(--sage); transform:translateY(-1px);}
+.btn-ghost{background:transparent; color:var(--ink);}
+.btn-ghost:hover{background:var(--ink); color:var(--cream);}
+
+/* header */
+header{position:sticky; top:0; z-index:50; background:rgba(251,248,243,0.85); backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid var(--sand);}
+.nav{display:flex; align-items:center; justify-content:space-between; height:74px;}
+.logo{display:flex; align-items:center; gap:12px;}
+.logo svg{display:block;}
+.logo .wm{font-family:var(--serif); font-size:25px; font-weight:600; color:var(--ink); letter-spacing:-0.01em;}
+.logo .tag{font-family:var(--sans); font-size:9.5px; font-weight:600; letter-spacing:0.32em; color:var(--taupe); text-transform:uppercase; display:block; margin-top:2px;}
+.navlinks{display:flex; align-items:center; gap:30px;}
+.navlinks a{font-size:15px; color:var(--ink-soft); font-weight:500;}
+.navlinks a:hover{color:var(--ink);}
+.navtoggle{display:none; background:none; border:0; font-size:24px; cursor:pointer; color:var(--ink);}
+
+/* hero */
+.hero{padding:88px 0 76px; position:relative; overflow:hidden;}
+.hero .grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;}
+.hero h1{font-size:clamp(42px,6vw,68px); margin-bottom:22px;}
+.hero .sub{font-size:19px; max-width:34ch; margin-bottom:30px;}
+.hero .ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:26px;}
+.trustline{font-size:14px; color:var(--taupe); letter-spacing:0.01em;}
+.trustline strong{color:var(--sage); font-weight:600;}
+/* hero visual: stacked folded linen card */
+.heroart{aspect-ratio:1/1; border-radius:18px; background:
+   radial-gradient(120% 120% at 30% 20%, var(--cream2), var(--sand) 90%);
+   border:1px solid var(--sand2); display:flex; align-items:center; justify-content:center; box-shadow:0 30px 60px -30px rgba(31,42,46,.25);}
+.heroart .stack{width:62%; }
+
+/* sections */
+section{padding:80px 0;}
+.section-sand{background:linear-gradient(180deg, var(--cream), var(--cream2));}
+.section-ink{background:var(--ink); color:var(--cream);}
+.section-ink h2,.section-ink h3{color:var(--cream);}
+.lead{font-size:clamp(26px,3.4vw,38px); max-width:20ch;}
+.kicker{margin-bottom:40px;}
+.kicker h2{font-size:clamp(30px,4vw,44px); margin:10px 0 0;}
+
+/* problem */
+.problem p{font-size:20px; max-width:60ch; color:var(--ink-soft);}
+.problem .punch{color:var(--ink); font-family:var(--serif); font-size:clamp(24px,3vw,32px); line-height:1.25; max-width:24ch; margin-top:10px;}
+
+/* steps */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+.step{background:var(--cream); border:1px solid var(--sand); border-radius:16px; padding:30px 26px;}
+.step .n{font-family:var(--serif); font-size:15px; color:var(--sage); font-weight:600; letter-spacing:.04em;}
+.step h3{font-size:23px; margin:8px 0 10px;}
+.step p{font-size:15.5px; color:var(--ink-soft); margin:0;}
+.section-sand .step{background:#fff;}
+
+/* pricing */
+.tiers{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;}
+.tier{background:var(--cream); border:1px solid var(--sand2); border-radius:18px; padding:32px 28px; display:flex; flex-direction:column; position:relative;}
+.tier.feat{border-color:var(--sage); box-shadow:0 24px 50px -28px rgba(58,90,76,.45);}
+.tier .badge{position:absolute; top:-12px; left:28px; background:var(--sage); color:var(--cream); font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; padding:5px 12px; border-radius:999px;}
+.tier h3{font-size:24px; margin-bottom:6px;}
+.tier .desc{font-size:14.5px; color:var(--ink-soft); margin-bottom:18px; min-height:66px;}
+.tier .price{font-family:var(--serif); font-size:30px; color:var(--ink); margin-bottom:2px;}
+.tier .price small{font-family:var(--sans); font-size:14px; color:var(--taupe); font-weight:500;}
+.tier ul{list-style:none; padding:0; margin:14px 0 24px; font-size:14.5px;}
+.tier li{padding:7px 0 7px 24px; position:relative; color:var(--ink-soft); border-top:1px solid var(--sand);}
+.tier li:before{content:""; position:absolute; left:2px; top:15px; width:9px; height:9px; border-radius:2px; background:var(--sand2); transform:rotate(45deg);}
+.tier.feat li:before{background:var(--sage);}
+.tier .btn{margin-top:auto;}
+.pricing-note{text-align:center; margin-top:28px; color:var(--taupe); font-size:15px;}
+
+/* service area */
+.area-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+.hoods{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;}
+.hood{border:1px solid var(--sand2); border-radius:999px; padding:8px 18px; font-size:14px; font-weight:500; background:var(--cream);}
+.section-ink .hood{border-color:rgba(251,248,243,.25); background:transparent; color:var(--cream);}
+
+/* why */
+.why{display:grid; grid-template-columns:repeat(2,1fr); gap:30px 48px;}
+.why .item h3{font-size:20px; margin-bottom:6px; display:flex; align-items:center; gap:10px;}
+.why .item h3:before{content:""; width:10px; height:10px; background:var(--sage); transform:rotate(45deg); display:inline-block;}
+.why .item p{font-size:15.5px; color:var(--ink-soft); margin:0;}
+
+/* testimonial */
+.quote{max-width:760px; margin:0 auto; text-align:center;}
+.quote blockquote{font-family:var(--serif); font-size:clamp(24px,3.2vw,34px); line-height:1.3; margin:0 0 18px;}
+.quote .attr{font-size:14px; color:var(--taupe); letter-spacing:.04em;}
+.placeholder{font-size:12px; color:var(--taupe); opacity:.7; margin-top:14px; font-style:italic;}
+
+/* FAQ */
+.faq details{border-top:1px solid var(--sand2); padding:20px 0;}
+.faq details:last-child{border-bottom:1px solid var(--sand2);}
+.faq summary{font-family:var(--serif); font-size:20px; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary:after{content:"+"; font-family:var(--sans); font-size:24px; color:var(--sage); transition:.2s;}
+.faq details[open] summary:after{transform:rotate(45deg);}
+.faq p{margin:14px 0 0; color:var(--ink-soft); font-size:16px; max-width:70ch;}
+
+/* contact */
+.contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:start;}
+.form{background:var(--cream); border:1px solid var(--sand2); border-radius:18px; padding:30px;}
+.form label{display:block; font-size:13px; font-weight:600; letter-spacing:.02em; margin:0 0 6px; color:var(--ink);}
+.form .row{margin-bottom:16px;}
+.form input,.form select,.form textarea{width:100%; font-family:var(--sans); font-size:15px; padding:12px 14px; border:1px solid var(--sand2); border-radius:10px; background:#fff; color:var(--ink);}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none; border-color:var(--sage);}
+.form .two{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+.form .btn{width:100%; justify-content:center; margin-top:6px;}
+.form .reassure{font-size:13px; color:var(--taupe); text-align:center; margin:12px 0 0;}
+
+/* footer */
+footer{background:var(--ink); color:var(--cream); padding:54px 0 36px;}
+.foot{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px;}
+.foot a{color:var(--sand);}
+.foot .small{font-size:13px; color:var(--sand2); opacity:.8;}
+.foot .small a{color:var(--sand2);}
+
+@media(max-width:860px){
+  .hero .grid,.area-grid,.contact-grid{grid-template-columns:1fr;}
+  .heroart{display:none;}
+  .steps,.tiers,.why{grid-template-columns:1fr;}
+  .navlinks{display:none;}
+  .navtoggle{display:block;}
+  .navlinks.open{display:flex; position:absolute; top:74px; left:0; right:0; flex-direction:column; gap:0; background:var(--cream); border-bottom:1px solid var(--sand); padding:8px 28px 18px;}
+  .navlinks.open a{padding:12px 0; border-bottom:1px solid var(--sand);}
+  .navlinks.open .btn{margin-top:12px; text-align:center; justify-content:center;}
+  section{padding:60px 0;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="IndyHost Laundry home">
+      <svg width="42" height="42" viewBox="0 0 120 120" aria-hidden="true">
+        <ellipse cx="60" cy="98" rx="33" ry="4.5" fill="#1F2A2E" opacity="0.06"/>
+        <path d="M30 70 L60 84 L90 70 L90 78 L60 92 L30 78 Z" fill="#D9CFC2"/>
+        <path d="M30 60 L60 74 L90 60 L90 68 L60 82 L30 68 Z" fill="#E7DFD3"/>
+        <path d="M60 28 L92 46 L60 64 L28 46 Z" fill="#FBF8F3"/>
+        <path d="M60 64 L92 46 L92 54 L60 72 Z" fill="#EFE8DC"/>
+        <path d="M28 46 L60 64 L60 72 L28 54 Z" fill="#F4EEE4"/>
+        <path d="M60 28 L60 64" stroke="#3A5A4C" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+        <path d="M28 46 L60 28 L92 46" fill="none" stroke="#fff" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <span><span class="wm">IndyHost</span><span class="tag">Indianapolis · Laundry</span></span>
+    </a>
+    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <nav class="navlinks" id="nav">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#area">Service area</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#contact">Get my rates</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Linen service for Indianapolis hosts</span>
+      <h1>Your linen never touches your hands again.</h1>
+      <p class="sub muted">IndyHost Laundry is same-day linen service for Indianapolis short-term-rental hosts. We pick up the dirty sheets and towels the day your guest checks out and have clean, hospital-cornered replacements at the property by the afternoon. Flat rate. No surprises.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#contact">Get my rates</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="trustline">Serving Indianapolis hosts. <strong>Same-day turns.</strong> Photo-documented.</p>
+    </div>
+    <div class="heroart" aria-hidden="true">
+      <svg class="stack" viewBox="0 0 240 240" fill="none">
+        <ellipse cx="120" cy="196" rx="78" ry="11" fill="#1F2A2E" opacity="0.06"/>
+        <rect x="52" y="150" width="136" height="26" rx="5" fill="#D9CFC2"/>
+        <rect x="58" y="124" width="124" height="26" rx="5" fill="#E7DFD3"/>
+        <rect x="64" y="98" width="112" height="26" rx="5" fill="#F4EEE4"/>
+        <path d="M120 44 L182 80 L120 116 L58 80 Z" fill="#FBF8F3" stroke="#E7DECF" stroke-width="1.5"/>
+        <path d="M120 116 L182 80 L182 90 L120 126 Z" fill="#EFE8DC"/>
+        <path d="M58 80 L120 116 L120 126 L58 90 Z" fill="#F4EEE4"/>
+        <path d="M120 44 L120 116" stroke="#3A5A4C" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+        <path d="M88 62 L152 62" stroke="#3A5A4C" stroke-width="1.4" stroke-linecap="round" opacity="0.2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap">
+    <span class="eyebrow">The part that quietly eats your business</span>
+    <h2 class="lead" style="margin:14px 0 26px;">Running a short-term rental is a business. Turnover laundry is the part that ruins the turn.</h2>
+    <p>Your cleaner does it badly, or you do it yourself at midnight, or you keep buying new sheet sets because one set is always in the wash. One hair on a pillow becomes a one-star review. One missing towel set becomes a scramble before the 4pm check-in. The laundry is small until it is the thing that ruins the turn.</p>
+    <p class="punch">You did not get into hosting to fold sheets. You should not have to think about it at all.</p>
+  </div>
+</section>
+
+<section class="section-sand" id="how">
+  <div class="wrap">
+    <div class="kicker"><span class="eyebrow">How it works</span><h2>Three steps. You do nothing on turn day.</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>We pick up at 11</h3><p>The day your guest checks out, we collect the dirty linens from the property. You do nothing. Your cleaner only has to make the bed later with the set we bring.</p></div>
+      <div class="step"><div class="n">02</div><h3>We wash to hotel spec</h3><p>Sheets and towels are washed, dried, and folded to a consistent standard, then photographed so you can see exactly what you are getting.</p></div>
+      <div class="step"><div class="n">03</div><h3>We deliver clean by 4</h3><p>Fresh, hospital-cornered sets are back at the property before the next guest arrives. Same day, every turn. You stop thinking about it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="kicker"><span class="eyebrow">Pricing</span><h2>Three ways to work with us.</h2></div>
+    <div class="tiers">
+      <div class="tier feat">
+        <span class="badge">Most popular</span>
+        <h3>Hosted Linen Program</h3>
+        <p class="desc">We own and maintain the linens. Each property gets labeled sets. On turn day we swap clean for dirty, so your cleaner just makes the bed.</p>
+        <div class="price">$45–$65 <small>/ turn</small></div>
+        <ul>
+          <li>$250 setup per property (two sheet + two towel sets)</li>
+          <li>$200 / month minimum per property</li>
+          <li>We replace worn linens. Wear is on us.</li>
+          <li>The lowest-effort, stickiest option</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Get my rates</a>
+      </div>
+      <div class="tier">
+        <h3>Pickup and Return</h3>
+        <p class="desc">You own your linens. We pick up dirty, deliver clean, on your schedule. Best if you already have a good linen rotation and just want the labor gone.</p>
+        <div class="price">$25–$35 <small>/ turn</small></div>
+        <ul>
+          <li>$0 setup</li>
+          <li>$100 / month minimum</li>
+          <li>Same-day pickup and delivery</li>
+          <li>Photo-documented every turn</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Get my rates</a>
+      </div>
+      <div class="tier">
+        <h3>Boutique Fitness Towels</h3>
+        <p class="desc">For Indianapolis gyms, studios, and salons tired of doing towels in-house. Reliable weekly towel turnover, billed by the piece.</p>
+        <div class="price">Per piece <small>/ volume-based</small></div>
+        <ul>
+          <li>$200 / week minimum</li>
+          <li>Weekly route, consistent timing</li>
+          <li>Broad Ripple, Carmel, Fishers</li>
+          <li>Never run out of clean towels</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Get my rates</a>
+      </div>
+    </div>
+    <p class="pricing-note">Flat and predictable. No per-pound surprises, no peak-season gouging.</p>
+  </div>
+</section>
+
+<section class="section-ink" id="area">
+  <div class="wrap area-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--sand2)">Service area</span>
+      <h2 class="lead" style="margin-top:14px;">Indianapolis and the close-in suburbs.</h2>
+      <p class="muted" style="color:var(--sand2); max-width:42ch;">If you are just outside these areas, ask us. We add neighborhoods as the route grows.</p>
+    </div>
+    <div>
+      <p style="margin-bottom:6px; color:var(--sand);">Short-term rentals</p>
+      <div class="hoods">
+        <span class="hood">Mass Ave</span><span class="hood">Fountain Square</span><span class="hood">Downtown</span>
+      </div>
+      <p style="margin:26px 0 6px; color:var(--sand);">Boutique fitness and salons</p>
+      <div class="hoods">
+        <span class="hood">Broad Ripple</span><span class="hood">Carmel</span><span class="hood">Fishers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sand">
+  <div class="wrap">
+    <div class="kicker"><span class="eyebrow">Why IndyHost</span><h2>Built for the check-out, check-in window.</h2></div>
+    <div class="why">
+      <div class="item"><h3>Same-day turn</h3><p>Pickup around 11am, clean linens back by 4pm. Built for the narrow window between guests.</p></div>
+      <div class="item"><h3>Photo-documented</h3><p>Proof of pickup and proof of delivery on every turn. No "did it get done" guesswork.</p></div>
+      <div class="item"><h3>Hospital corners, every time</h3><p>Folded and finished to a hotel standard, not a home-laundry standard.</p></div>
+      <div class="item"><h3>Flat, predictable pricing</h3><p>You know your monthly number. No per-pound math, no surprise invoices.</p></div>
+      <div class="item"><h3>Local and responsive</h3><p>One Indianapolis operator who answers, not a national call center. We know your properties by name.</p></div>
+      <div class="item"><h3>Insured</h3><p>General liability plus cargo coverage on every pickup, so your linens are protected in transit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap quote">
+    <span class="eyebrow">From a host</span>
+    <blockquote style="margin-top:16px;">"I stopped buying backup sheet sets and stopped thinking about turn-day laundry entirely. It just shows up clean."</blockquote>
+    <div class="attr">Host, 6 properties · Fountain Square</div>
+    <div class="placeholder">Placeholder testimonial. Replace with a real host quote after the first month.</div>
+  </div>
+</section>
+
+<section class="section-sand" id="faq">
+  <div class="wrap" style="max-width:840px;">
+    <div class="kicker"><span class="eyebrow">FAQ</span><h2>The questions hosts ask first.</h2></div>
+    <div class="faq">
+      <details open><summary>How fast is the turnaround?</summary><p>Same day. We pick up around 11am on turn day and have clean linens back at the property by about 4pm, ahead of the next check-in.</p></details>
+      <details><summary>Do I have to be there for pickup or delivery?</summary><p>No. We coordinate access with you or your cleaner once, then it runs on its own. You do nothing on turn day.</p></details>
+      <details><summary>What if a sheet or towel gets stained or damaged?</summary><p>On the Hosted Linen Program we own the linens, so normal wear is on us, not you. We track inventory per property and replace worn sets as part of the service. Every turn is photo-documented so there is never a dispute about condition.</p></details>
+      <details><summary>How is this different from just using my cleaner?</summary><p>Your cleaner is great at cleaning and rarely great at laundry. We are a dedicated linen service: consistent washing, hotel-standard folding, same-day timing, and we never run out of clean sets. We do not solicit your cleaner's other work. We make their turn day easier.</p></details>
+      <details><summary>What does it cost?</summary><p>Most hosts run the Hosted Linen Program at a $250 one-time setup per property, then $45 to $65 per turn with a $200 monthly minimum. Pickup-and-Return starts at $25 to $35 per turn with a $100 minimum. We will send exact numbers for your properties.</p></details>
+      <details><summary>Do you serve gyms and salons too?</summary><p>Yes. Our Boutique Fitness Towel Service handles weekly towel turnover for gyms, studios, and salons in Broad Ripple, Carmel, and Fishers, billed by the piece with a $200 weekly minimum.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Get started</span>
+      <h2 class="lead" style="margin:14px 0 18px;">Stop thinking about the laundry.</h2>
+      <p class="muted">Tell us how many properties you run and where, and we will send back exact rates the same day. No pitch, just numbers.</p>
+      <p class="muted" style="margin-top:24px;">Prefer email?<br><a href="mailto:hello@indyhostlaundry.com" style="color:var(--sage); font-weight:600;">hello@indyhostlaundry.com</a></p>
+    </div>
+    <form class="form" action="mailto:hello@indyhostlaundry.com" method="post" enctype="text/plain">
+      <div class="two">
+        <div class="row"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+        <div class="row"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+      </div>
+      <div class="two">
+        <div class="row"><label for="props">Number of properties</label><input id="props" name="properties" type="number" min="1" placeholder="3"></div>
+        <div class="row"><label for="hood">Neighborhood</label>
+          <select id="hood" name="neighborhood">
+            <option>Mass Ave</option><option>Fountain Square</option><option>Downtown</option>
+            <option>Broad Ripple</option><option>Carmel</option><option>Fishers</option><option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row"><label for="msg">Anything we should know?</label><textarea id="msg" name="message" rows="3" placeholder="Turn frequency, bedroom counts, current pain..."></textarea></div>
+      <button class="btn btn-primary" type="submit">Get my rates</button>
+      <p class="reassure">No spam. Just numbers, same day.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="logo" style="margin-bottom:10px;">
+        <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M30 70 L60 84 L90 70 L90 78 L60 92 L30 78 Z" fill="#D9CFC2"/>
+          <path d="M60 28 L92 46 L60 64 L28 46 Z" fill="#FBF8F3"/>
+          <path d="M60 28 L60 64" stroke="#3A5A4C" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="wm" style="color:var(--cream); font-family:var(--serif); font-size:22px;">IndyHost</span>
+      </div>
+      <p class="small">Same-day linen service for Indianapolis hosts.<br><a href="mailto:hello@indyhostlaundry.com">hello@indyhostlaundry.com</a></p>
+    </div>
+    <div class="small" style="text-align:right;">
+      <p>Indianapolis, Indiana</p>
+      <p>An Indy Local Ops company</p>
+      <p>© 2026 IndyHost Laundry</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

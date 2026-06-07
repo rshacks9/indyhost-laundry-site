@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="IndyHost Laundry mark — a folded stack of pressed linen">
+  <title>IndyHost Laundry mark</title>
+  <desc>A neatly folded square of linen seen in stacked perspective, with a subtle crease line. Warm cream face, sand side, sage crease accent.</desc>
+  <!-- Folded linen stack: top face + a thin folded edge below, suggesting a pressed set -->
+  <g>
+    <!-- soft cast shadow under the stack -->
+    <ellipse cx="60" cy="98" rx="34" ry="4.5" fill="#1F2A2E" opacity="0.06"/>
+
+    <!-- lower folded layers (the underside of the fold), sand/taupe -->
+    <path d="M30 70 L60 84 L90 70 L90 78 L60 92 L30 78 Z" fill="#D9CFC2"/>
+    <path d="M30 60 L60 74 L90 60 L90 68 L60 82 L30 68 Z" fill="#E7DFD3"/>
+
+    <!-- top folded face, warm cream, with rounded corners feel via the diamond fold -->
+    <path d="M60 28 L92 46 L60 64 L28 46 Z" fill="#FBF8F3"/>
+    <!-- subtle right-side plane to read as a 3D folded set -->
+    <path d="M60 64 L92 46 L92 54 L60 72 Z" fill="#EFE8DC"/>
+    <path d="M28 46 L60 64 L60 72 L28 54 Z" fill="#F4EEE4"/>
+
+    <!-- crease line down the pressed fold, sage accent -->
+    <path d="M60 28 L60 64" stroke="#3A5A4C" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+    <!-- a soft secondary press line -->
+    <path d="M44 37 L76 37" stroke="#3A5A4C" stroke-width="1" stroke-linecap="round" opacity="0.22"/>
+
+    <!-- crisp top edge highlight -->
+    <path d="M28 46 L60 28 L92 46" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>
